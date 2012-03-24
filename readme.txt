@@ -1,4 +1,4 @@
-Syobon Action
+Twisted Syobon
 ----------------------------
 2012 Alexander von Gluck
 
