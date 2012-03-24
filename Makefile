@@ -1,5 +1,5 @@
-SyobonAction:main.o loadg.o DxLib.o
-	g++ main.o loadg.o DxLib.o -o SyobonAction `sdl-config --libs` -lSDL_gfx -lSDL_image -lSDL_mixer -lSDL_ttf -lm
+TwistedSyobon:main.o loadg.o DxLib.o
+	g++ main.o loadg.o DxLib.o -o TwistedSyobon `sdl-config --libs` -lSDL_gfx -lSDL_image -lSDL_mixer -lSDL_ttf -lm
 main.o:main.cpp
 	gcc -c main.cpp
 loadg.o:loadg.cpp
@@ -7,4 +7,4 @@ loadg.o:loadg.cpp
 DxLib.o:DxLib.cpp
 	gcc -c DxLib.cpp
 clean:
-	rm -f *.o SyobonAction
+	rm -f *.o TwistedSyobon
