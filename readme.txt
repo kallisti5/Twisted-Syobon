@@ -11,3 +11,8 @@ Based on the original "Syobon Action" game
 by Z Gundam Tanosii
 http://tiku.m20.coreserver.jp/pc/main/index.html
 ----------------------------
+
+TODO
+----------------------------
+* Change out some sound effects
+  and music to avoid license issues.
