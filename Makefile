@@ -6,3 +6,5 @@ loadg.o:loadg.cpp
 	gcc -c loadg.cpp
 DxLib.o:DxLib.cpp
 	gcc -c DxLib.cpp
+clean:
+	rm *.o SyobonAction
