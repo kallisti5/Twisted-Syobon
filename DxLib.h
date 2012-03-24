@@ -21,12 +21,12 @@
 #define ScreenFlip() SDL_Flip(screen)
 #define GetNowCount() SDL_GetTicks()
 
-//UNIMPLEMENTED - macro substitution
+// UNIMPLEMENTED - macro substitution
 #define SetFontThickness(f);
 #define StopSoundMem(s);
 #define ChangeVolumeSoundMem(s, v);
 
-//Sound
+// Sound
 #define DX_PLAYTYPE_LOOP -1
 #define DX_PLAYTYPE_BACK 0
 void PlaySoundMem(Mix_Chunk* s, int l);
@@ -36,14 +36,14 @@ Mix_Music* LoadMusicMem(const char* f);
 
 int DxLib_Init();
 
-//Main screen
+// Main screen
 extern SDL_Surface *screen;
 
 //Fonts
 #define FONT_MAX 64
 extern TTF_Font *font[FONT_MAX];
 
-//Strings & fonts
+// Strings & fonts
 #define DX_FONTTYPE_NORMAL 0
 #define DX_FONTTYPE_EDGE 1
 void SetFontSize(byte size);
@@ -51,7 +51,7 @@ void ChangeFontType(byte type);
 void DrawString(int a, int b, const char *x, Uint32 c);
 void DrawFormatString(int a, int b, Uint32 color, const char *str, ...);
 
-//Key Aliases
+// Key Aliases
 #define KEY_INPUT_ESCAPE SDLK_ESCAPE
 #define KEY_INPUT_LEFT SDLK_LEFT
 #define KEY_INPUT_RIGHT SDLK_RIGHT
@@ -94,7 +94,7 @@ void DrawTurnGraphZ(int a, int b, SDL_Surface * mx);
 void DrawVertTurnGraph(int a, int b, SDL_Surface * mx);
 
 SDL_Surface *DerivationGraph(int srcx, int srcy, int width, int height,
-			     SDL_Surface * src);
+	SDL_Surface * src);
 
 //Noticably different than the original
 SDL_Surface *LoadGraph(const char *filename);
