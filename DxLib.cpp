@@ -1,5 +1,9 @@
 #include "DxLib.h"
 
+
+#define DATA_LOCATION "data"
+
+
 SDL_Joystick* joystick;
 
 bool keysHeld[SDLK_LAST];
@@ -70,7 +74,10 @@ void SetFontSize(byte size)
 {
     fontsize = size;
     if (font[size] == NULL) {
-	font[size] = TTF_OpenFont("res/sazanami-gothic.ttf", size);
+	char filePath[1024];
+	sprintf(filePath, "%s/res/sazanami-gothic.ttf", DATA_LOCATION);
+	font[size] = TTF_OpenFont(filePath, size);
+
 	if (font[size] == NULL) {
 	    printf("Unable to load font: %s\n", TTF_GetError());
 	    exit(1);
@@ -257,7 +264,9 @@ SDL_Surface *DerivationGraph(int srcx, int srcy, int width, int height,
 //Noticably different than the original
 SDL_Surface *LoadGraph(const char *filename)
 {
-    SDL_Surface *image = IMG_Load(filename);
+	char filePath[1024];
+	sprintf(filePath, "%s/%s", DATA_LOCATION, filename);
+    SDL_Surface *image = IMG_Load(filePath);
 
     if (image) return image;
 	fprintf(stderr, "Error: Unable to load %s: %s\n", filename, IMG_GetError());
@@ -273,7 +282,10 @@ Mix_Chunk* LoadSoundMem(const char* f)
 {
     if(!sound) return NULL;
 
-    Mix_Chunk* s = Mix_LoadWAV(f);
+	char filePath[1024];
+	sprintf(filePath, "%s/%s", DATA_LOCATION, f);
+
+    Mix_Chunk* s = Mix_LoadWAV(filePath);
     if(s) return s;
     fprintf(stderr, "Error: Unable to load sound %s: %s\n", f, Mix_GetError());
     return NULL;
@@ -283,7 +295,10 @@ Mix_Music* LoadMusicMem(const char* f)
 {
     if(!sound) return NULL;
 
-    Mix_Music* m = Mix_LoadMUS(f);
+	char filePath[1024];
+	sprintf(filePath, "%s/%s", DATA_LOCATION, f);
+
+    Mix_Music* m = Mix_LoadMUS(filePath);
     if(m) return m;
     fprintf(stderr, "Error: Unable to load music %s: %s\n", f, Mix_GetError());
     return NULL;
