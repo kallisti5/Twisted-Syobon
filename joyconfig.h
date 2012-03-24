@@ -7,4 +7,3 @@
 
 //The button number that will be used for jumping
 #define JOYSTICK_JUMP 1
-
