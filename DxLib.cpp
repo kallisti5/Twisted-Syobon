@@ -31,7 +31,7 @@ int DxLib_Init()
 	}
 
 	SDL_WM_SetCaption("Twisted Syobon "
-		"(しょぼんのアクション)", NULL);
+		"(ねじれたしょぼん)", NULL);
 	SDL_ShowCursor(SDL_DISABLE);
 
 	if (IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG) {
