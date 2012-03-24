@@ -30,7 +30,7 @@ int DxLib_Init()
 		return -1;
 	}
 
-	SDL_WM_SetCaption("Syobon Action "
+	SDL_WM_SetCaption("Twisted Syobon "
 		"(しょぼんのアクション)", NULL);
 	SDL_ShowCursor(SDL_DISABLE);
 
