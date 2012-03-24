@@ -1,5 +1,5 @@
-Open Syobon Action is a cross-platform port of the unforgiving Japanese parody of
-Super Mario Bros..
+Twisted Syobon is a cross-platform port of the unforgiving
+Japanese parody of Super Mario Bros.
 
 Requires:
 SDL, SDL_image, SDL_mixer, SDL_ttf, SDL_gfx
