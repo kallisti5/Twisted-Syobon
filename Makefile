@@ -7,4 +7,4 @@ loadg.o:loadg.cpp
 DxLib.o:DxLib.cpp
 	gcc -c DxLib.cpp
 clean:
-	rm *.o SyobonAction
+	rm -f *.o SyobonAction
