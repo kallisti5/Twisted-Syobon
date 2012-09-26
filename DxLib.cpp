@@ -17,7 +17,9 @@ void deinit();
 int DxLib_Init()
 {
 	atexit(deinit);
+	#if defined(LC_CTYPE)
 	setlocale(LC_CTYPE, "ja_JP.UTF-8");
+	#endif
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		fprintf(stderr, "Unable to init SDL: %s\n", SDL_GetError());
